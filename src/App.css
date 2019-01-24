@@ -2,6 +2,7 @@
     font-family: 'Sarabun', sans-serif;
 }
 
+
 .App-header {
     background-color: orange;
     color: azure;
@@ -9,13 +10,23 @@
     text-align: center;
 }
 
-.card {
-    display: inline-block;
-    border: #000000 1px solid;
-    padding: 24px;
-    margin: 24px 24px 24px 30px;
-    text-align: center;
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
 }
+.card {
+    border: #000000 1px solid;
+    padding: 12px;
+    margin: 24px;
+    text-align: center;
+    justify-items: center;
+}
+
+.card img{
+    padding-top: 12px;
+}
+
 .buttonContainer button{
     background-color: #000000;
     margin: 12px;
