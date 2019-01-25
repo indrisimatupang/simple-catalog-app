@@ -10,7 +10,6 @@ class App extends Component {
     title: '',
   }
 
-  
   render() {
     console.log(this.state.pictures)
     return (
@@ -31,11 +30,22 @@ class App extends Component {
           <div className='buttonContainer'>
             <button onClick={this.prevPage}><b>Previous</b></button>
             <button onClick={this.nextPage}><b>Next</b></button>
+=======
+          {this.state.pictures.map(result => 
+          <Card
+          key={result.id} 
+          url={result.thumbnailUrl}
+          title= {result.title }
+            />)}
+          <div className='buttonContainer'>
+            <button><b>Previous</b></button>
+            <button><b>Next</b></button>
           </div>
         </div>
       </div>
     )
   }
+
   
   componentDidMount(){
     this.getPhotos(1)
@@ -49,6 +59,19 @@ class App extends Component {
         pictures: data.result,
       })
     })
+
+  componentDidMount(){
+    this.getPhotos()
+  }
+
+  getPhotos = () => {
+    fetch('https://jsonplaceholder.typicode.com/photos')
+      .then(results => results.json())
+      .then(data => { 
+        this.setState({
+          pictures: data,
+        })
+      })
   }
   
   nextPage = (page) => {

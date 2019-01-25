@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.cardContainer{
+.row{
     display: grid;
     grid-template-columns: auto auto auto;
 
