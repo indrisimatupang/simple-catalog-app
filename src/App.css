@@ -1,33 +1,105 @@
 * {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'HelveticaNeue', sans-serif;
 }
 
-.App-header {
-    background-color: orange;
-    color: azure;
-    padding: 12px;
-    text-align: center;
+header a, h1 {
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-weight: lighter;
+    margin: 48px 0 0 36px;
+}
+
+header {
+    background-color: #d8690b;
+    padding: 20px 0 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.logo {
+    color: #fcfcfc;
+}
+
+a.menu {
+    color: #f4ece6;
+    padding-left: 60px;
+    font-weight: lightest;
+}
+
+a.menu:hover {
+    color: #fcfcfc;
 }
 
 .card {
     display: inline-block;
-    border: #000000 1px solid;
-    padding: 24px;
-    margin: 24px 24px 24px 30px;
-    text-align: center;
-}
-.buttonContainer button{
-    background-color: #000000;
-    margin: 12px;
-    padding: 12px;
-    color: white;
+    margin : 48px 36px;
+    border-color: transparent;
+    box-shadow: 0 0 6px;
+    border-radius: 0 0 10px 10px;
 }
 
-.buttonContainer button:hover {
-    background-color: white;
-    color: #000000;
+.card img {
+    width: 210px;
+    height: 120px;
 }
 
-.buttonContainer {
+.card p {
+    font-size: 12px;
+}
+
+hr {
+    width: 48px;
+    height: 2px;
+    line-height: 2px;
+    margin-left: 36px;
+    background-color: #100e0e;
+}
+
+.title {
+    padding: 4px 12px 8px 12px;
+}
+
+.price {
+    padding: 0 12px;
+    color: #d8690b;
+}
+
+button {
     text-align: center;
+    width: 72px;
+    height: 48px;
+    color: #aca2a2;
+    font-size: 24px;
+    margin: 36px;
+    border-color: transparent;
+    box-shadow: 0px 0px 8px;
+    border-radius: 10px;
+    font-weight: lighter;
+}
+
+.prev {
+    float: left;
+}
+
+.prev:hover, .next:hover {
+    background-color: #d8690b;
+    color: #fcfcfc; 
+}
+
+.next {
+    float: right;
 }
