@@ -44,6 +44,11 @@ a.menu:hover {
     color: #fcfcfc;
 }
 
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
 .card {
     display: inline-block;
     margin : 48px 36px;
