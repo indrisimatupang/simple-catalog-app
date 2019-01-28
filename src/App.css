@@ -52,7 +52,7 @@ a.menu:hover {
 .card {
     display: inline-block;
     margin : 48px 36px;
-    border-color: transparent;
+    border-color: transparent   ;
     box-shadow: 0 0 6px;
     border-radius: 0 0 10px 10px;
 }
@@ -100,11 +100,33 @@ button {
     float: left;
 }
 
-.prev:hover, .next:hover {
+.prev:hover, .next:hover, .backButton:hover {
     background-color: #d8690b;
     color: #fcfcfc; 
 }
 
 .next {
     float: right;
+}
+
+/* Details */
+.detailsContainer {
+    margin: 48px;
+}
+
+.detailsContainer p {
+    font-size: 24px;
+}
+
+.detailsContainer img {
+    width: 816px;
+    height: 436px;
+}
+
+.backButton {
+    margin-left: 48px;
+}
+
+.detailsPrice {
+    color: #d8690b
 }

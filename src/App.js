@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card';
+import Details from './Details';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -13,34 +15,17 @@ class App extends Component {
   render() {
     console.log(this.state.pictures)
     return (
-      <div className='container'>
-        <div className='App'>
-          <header className='App-header'>
-            <ul>
-              <li><a href="App.js" className='logo'>SIMPLE CATALOG APP</a></li>
-              <li><a href="App.js" className='menu'>Home</a></li>
-            </ul>
-          </header>
-          <div className='cardContainer'>
-            <h1>POPULAR PRODUCTS</h1>
-            <hr></hr>
-              {this.state.pictures.map(result => 
-              <Card
-              key={result.id} 
-              url={result.productImage}
-              title= {result.productName}
-              price= {result.productPrice}
-              />)}
-          </div>
-          <div className='buttonContainer'>
-            <button onClick={this.prevPage} className='prev'>Prev</button>
-            <button onClick={this.nextPage} className='next'>Next</button>
-          </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={this.Home} />
+          <Route path="/img/:id" component={this.ImageView} />
         </div>
-      </div>
+      </Router>
     )
   }
   
+  
+  // fetch data
   componentDidMount(){
     this.getPhotos();
   }
@@ -56,6 +41,7 @@ class App extends Component {
     })
   }
 
+  // pagination
   nextPage = (page) => {
     this.getPhotos(this.state.page+1);
   };
@@ -63,6 +49,81 @@ class App extends Component {
   prevPage = (page) => {
     this.getPhotos(this.state.page-1);
   };
+
+  Home =()=>{
+    return(
+      <div className='container'>
+          <div className='App'>
+            <header className='App-header'>
+              <ul>
+                <li><a href="/" className='logo'>SIMPLE CATALOG APP</a></li>
+                <li><a href="/" className='menu'>Home</a></li>
+              </ul>
+            </header>
+            <div className='cardContainer'>
+              <h1>POPULAR PRODUCTS</h1>
+              <hr></hr>
+                {this.state.pictures.map((result, index) => 
+                <Link 
+                  key={index}
+                  to={{
+                    pathname: `/img/${index}`
+                  }}
+                  className = 'link'
+                >
+                  <Card
+                  key={index} 
+                  url={result.productImage}
+                  title= {result.productName}
+                  price= {result.productPrice}
+                  />
+                </Link>
+                )}
+            </div>
+            <div className='buttonContainer'>
+              <button onClick={this.prevPage} className='prev'>Prev</button>
+              <button onClick={this.nextPage} className='next'>Next</button>
+            </div>
+          </div>
+        </div>
+    )
+  }
+
+  ImageView= ({ match, history }) => {
+    let picture = this.state.pictures[parseInt(match.params.id, 10)];
+    let back = e => {
+      e.stopPropagation();
+      history.goBack();
+    };
+    console.log(picture)
+    if( picture ){
+      return (
+        <div>
+          <header className='App-header'>
+            <ul>
+              <li><a href="/" className='logo'>SIMPLE CATALOG APP</a></li>
+              <li><a href="/" className='menu'>Home</a></li>
+            </ul>
+          </header>
+          <div>
+            <Details 
+            key={picture.id}
+            url={picture.productImage}
+            title= {picture.productName}
+            price= {picture.productPrice}
+            />
+            <button onClick={back} className='backButton'>Back</button>
+          </div>
+        </div>
+      );
+    }
+    else {
+      return null
+    }
+  }
 }
+
+
+
 
 export default App;
