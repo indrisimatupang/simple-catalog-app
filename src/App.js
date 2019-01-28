@@ -69,7 +69,7 @@ class App extends Component {
                   to={{
                     pathname: `/img/${index}`
                   }}
-                  className = 'link'
+                  style={{ color: '#000' }}
                 >
                   <Card
                   key={index} 
