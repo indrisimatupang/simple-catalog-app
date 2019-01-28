@@ -52,7 +52,7 @@ a.menu:hover {
 .card {
     display: inline-block;
     margin : 48px 36px;
-    border-color: transparent   ;
+    border-color: transparent;
     box-shadow: 0 0 6px;
     border-radius: 0 0 10px 10px;
 }

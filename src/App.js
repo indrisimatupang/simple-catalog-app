@@ -6,14 +6,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   state = {
-    page:0,
+    page:1,
     pictures: [],
     title: '',
   }
 
   
   render() {
-    console.log(this.state.pictures)
     return (
       <Router>
         <div>
@@ -24,10 +23,9 @@ class App extends Component {
     )
   }
   
-  
   // fetch data
   componentDidMount(){
-    this.getPhotos();
+    this.getPhotos(this.state.page);
   }
   
   getPhotos = (page) => {
@@ -43,14 +41,14 @@ class App extends Component {
 
   // pagination
   nextPage = (page) => {
-    this.getPhotos(this.state.page+1);
+    this.getPhotos(this.state.page + 1);
   };
   
   prevPage = (page) => {
-    this.getPhotos(this.state.page-1);
+    this.getPhotos(this.state.page - 1);
   };
 
-  Home =()=>{
+  Home = () => {
     return(
       <div className='container'>
           <div className='App'>
@@ -69,7 +67,7 @@ class App extends Component {
                   to={{
                     pathname: `/img/${index}`
                   }}
-                  className = 'link'
+                  style={{ color: '#000' }}
                 >
                   <Card
                   key={index} 
@@ -91,11 +89,12 @@ class App extends Component {
 
   ImageView= ({ match, history }) => {
     let picture = this.state.pictures[parseInt(match.params.id, 10)];
+
     let back = e => {
       e.stopPropagation();
       history.goBack();
     };
-    console.log(picture)
+
     if( picture ){
       return (
         <div>
