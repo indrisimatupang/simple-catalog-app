@@ -1,0 +1,20 @@
+.detailsContainer {
+    margin: 48px;
+}
+
+.detailsContainer p {
+    font-size: 24px;
+}
+
+.detailsContainer img {
+    width: 816px;
+    height: 436px;
+}
+
+.backButton {
+    margin-left: 48px;
+}
+
+.detailsPrice {
+    color: #d8690b
+}

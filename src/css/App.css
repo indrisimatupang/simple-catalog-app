@@ -44,43 +44,12 @@ a.menu:hover {
     color: #fcfcfc;
 }
 
-.row{
-    display: grid;
-    grid-template-columns: auto auto auto;
-
-}
-.card {
-    display: inline-block;
-    margin : 48px 36px;
-    border-color: transparent   ;
-    box-shadow: 0 0 6px;
-    border-radius: 0 0 10px 10px;
-}
-
-.card img {
-    width: 210px;
-    height: 120px;
-}
-
-.card p {
-    font-size: 12px;
-}
-
 hr {
     width: 48px;
     height: 2px;
     line-height: 2px;
     margin-left: 36px;
     background-color: #100e0e;
-}
-
-.title {
-    padding: 4px 12px 8px 12px;
-}
-
-.price {
-    padding: 0 12px;
-    color: #d8690b;
 }
 
 button {
@@ -107,26 +76,4 @@ button {
 
 .next {
     float: right;
-}
-
-/* Details */
-.detailsContainer {
-    margin: 48px;
-}
-
-.detailsContainer p {
-    font-size: 24px;
-}
-
-.detailsContainer img {
-    width: 816px;
-    height: 436px;
-}
-
-.backButton {
-    margin-left: 48px;
-}
-
-.detailsPrice {
-    color: #d8690b
 }

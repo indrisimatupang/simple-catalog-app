@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.css';
+import './css/Card.css';
 
 const Card = (props) => {
-    console.log(props);
   return (
     <div className='card'>
       <img 
