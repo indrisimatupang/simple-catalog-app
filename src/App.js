@@ -97,12 +97,8 @@ class App extends Component {
       e.stopPropagation();
       history.goBack();
     };
-<<<<<<< HEAD
+    
     if( picture ){
-=======
-
-    if ( picture ){
->>>>>>> 5e5aa84a1f2070851e2575c9417c3214c4ec13ba
       return (
         <div>
           <header className='App-header'>

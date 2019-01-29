@@ -1,11 +1,7 @@
 .card {
     display: inline-block;
     margin : 48px 36px;
-<<<<<<< HEAD
-    border-color: transparent   ;
-=======
     border-color: transparent;
->>>>>>> 5e5aa84a1f2070851e2575c9417c3214c4ec13ba
     box-shadow: 0 0 6px;
     border-radius: 0 0 10px 10px;
 }
