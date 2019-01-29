@@ -1,0 +1,28 @@
+@import 'variables';
+
+.card {
+    display: inline-block;
+    margin : 48px 36px;
+    border-color: $borderColor;
+    box-shadow: $boxShadow;
+    border-radius: 0 0 10px 10px;
+}
+
+.card {
+    img {
+        width: 210px;
+        height: 120px;
+    }
+    p {
+        font-size: $smallFonts;
+    }
+
+    .title {
+        padding: 4px 12px 8px 12px;
+    }
+
+    .price {
+        padding: 0 12px;
+        color: #d8690b;
+    }
+}

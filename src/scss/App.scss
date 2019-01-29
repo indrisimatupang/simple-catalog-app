@@ -1,0 +1,58 @@
+@import 'variables';
+
+* {
+    font-family: $font;
+}
+
+header {
+    background-color: $primaryColor;
+    padding: 20px 0 24px;
+    a {
+        @extend %fontStyle;
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        display: inline
+    }
+    .logo {
+        color: $lightFonts;
+    }
+    .menu {
+        color: $inactiveNav;
+        padding-left: 60px;
+        font-weight: lightest;
+    }
+    .menu:hover {
+        color: $lightFonts;
+    }
+}
+
+h1 {
+    font-weight: $fontWeight;
+    margin: 48px 0 0 36px;
+    @extend %fontStyle;
+}
+
+hr {
+    @extend %hr;
+}
+
+button {
+    @extend %button;
+}
+
+button:hover {
+    @extend %buttonHover;
+}
+
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
