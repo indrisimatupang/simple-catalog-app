@@ -70,10 +70,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### App Screenshots
 
 Load Screen
-![Alt Text]('src/screenshots/LoadScreen.png')
+![Alt Text](src/screenshots/LoadScreen.png)
 
 Home Screen 
-![Alt Text]('src/screenshots/HomeScreen.png')
+![Alt Text](src/screenshots/HomeScreen.png)
 
 Detail Screen
-![Alt Text]('src/screenshots/DetailScreen.png)
+![Alt Text](src/screenshots/DetailScreen.png)
