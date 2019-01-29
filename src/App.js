@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import './css/App.css';
-import './css/Details.css';
 import Card from './Card';
 import Details from './Details';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './css/App.css';
+import './css/Details.css';
+import './css/LoadingScreen.css';
 
 class App extends Component {
   state = {
     page:1,
     pictures: [],
     title: '',
+    isLoading: true
   }
-
-  
   render() {
+    if (this.state.isLoading){
+      return (
+        <div className='loader'></div>
+      )
+    }
     return (
       <Router>
         <div>
@@ -36,7 +41,8 @@ class App extends Component {
     .then(data => { 
       this.setState({
         pictures: data.result.slice(0,5),
-        page: data.page
+        page: data.page,
+        isLoading: false
       })
     })
   }
@@ -97,7 +103,7 @@ class App extends Component {
       e.stopPropagation();
       history.goBack();
     };
-    
+
     if( picture ){
       return (
         <div>
