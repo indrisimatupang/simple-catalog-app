@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
+import './css/Details.css';
 import Card from './Card';
 import Details from './Details';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   state = {
-    page:0,
+    page:1,
     pictures: [],
     title: '',
   }
 
   
   render() {
-    console.log(this.state.pictures)
     return (
       <Router>
         <div>
@@ -27,7 +27,7 @@ class App extends Component {
   
   // fetch data
   componentDidMount(){
-    this.getPhotos();
+    this.getPhotos(this.state.page);
   }
   
   getPhotos = (page) => {
@@ -43,14 +43,14 @@ class App extends Component {
 
   // pagination
   nextPage = (page) => {
-    this.getPhotos(this.state.page+1);
+    this.getPhotos(this.state.page + 1);
   };
   
   prevPage = (page) => {
-    this.getPhotos(this.state.page-1);
+    this.getPhotos(this.state.page - 1);
   };
 
-  Home =()=>{
+  Home = () => {
     return(
       <div className='container'>
           <div className='App'>
@@ -69,7 +69,7 @@ class App extends Component {
                   to={{
                     pathname: `/img/${index}`
                   }}
-                  className = 'link'
+                  style={{ color: '#000' }}
                 >
                   <Card
                   key={index} 
@@ -95,7 +95,6 @@ class App extends Component {
       e.stopPropagation();
       history.goBack();
     };
-    console.log(picture)
     if( picture ){
       return (
         <div>
@@ -122,8 +121,5 @@ class App extends Component {
     }
   }
 }
-
-
-
 
 export default App;
