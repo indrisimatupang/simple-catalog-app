@@ -89,12 +89,15 @@ class App extends Component {
     )
   }
 
+  
   ImageView= ({ match, history }) => {
     let picture = this.state.pictures[parseInt(match.params.id, 10)];
+
     let back = e => {
       e.stopPropagation();
       history.goBack();
     };
+    
     if( picture ){
       return (
         <div>
