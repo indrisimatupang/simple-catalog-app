@@ -1,0 +1,15 @@
+@import 'variables';
+
+.detailsContainer {
+    margin: $primaryMargin;
+    p {
+        font-size: $primaryFontSize;
+    }
+    img {
+        width: 816px;
+        height: 436px;
+    }
+    .detailsPrice {
+        color: $primaryColor;
+    }
+}

@@ -1,0 +1,56 @@
+// colors
+$primaryColor: #d8690b;
+$textColor: #100e0e;
+$buttons: #aca2a2;
+$inactiveNav: #f4ece6;
+$lightFonts: #fcfcfc;
+$borderColor: transparent;
+
+// font
+$font : 'HelveticaNeue', 'Roboto', sans-serif;
+$primaryFontSize: 24px;
+$smallFonts: 12px;
+$fontWeight: lighter;
+
+// margins
+$primaryMargin: 48px;
+$smallMargin: 36px;
+$alignment: left;
+
+// borders and shadows
+$borderRadius: 10px;
+$boxShadow: 0px 0px 8px;
+$listStyle: none;
+
+// buttons
+%button {
+    text-align: center;
+    width: 72px;
+    height: $primaryMargin;
+    color: $buttons;
+    font-size: $primaryFontSize;
+    margin: $smallMargin;
+    border-color: $borderColor;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    font-weight: $fontWeight;
+}
+
+%buttonHover {
+    background-color: #d8690b;
+    color: #fcfcfc; 
+}
+
+%fontStyle {
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+%hr {
+    width: $primaryMargin;
+    height: 2px;
+    line-height: 2px;
+    margin-left: $smallMargin;
+    background-color: $textColor;
+}

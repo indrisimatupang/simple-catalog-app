@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Card from './Card';
 import Details from './Details';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './css/App.css';
-import './css/Details.css';
-import './css/LoadingScreen.css';
+import './scss/App.scss';
+import './scss/Details.scss';
+import './scss/LoadingScreen.scss';
 
 class App extends Component {
   state = {
