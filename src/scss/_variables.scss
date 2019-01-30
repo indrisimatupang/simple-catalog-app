@@ -37,13 +37,13 @@ $listStyle: none;
 }
 
 %buttonHover {
-    background-color: #d8690b;
-    color: #fcfcfc; 
+    background-color: $primaryColor;
+    color: $lightFonts; 
 }
 
 %fontStyle {
-    text-align: left;
-    font-size: 24px;
+    text-align: $alignment;
+    font-size: $primaryFontSize;
     letter-spacing: 3px;
 }
 
