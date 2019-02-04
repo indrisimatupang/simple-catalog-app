@@ -45,8 +45,7 @@ class App extends Component {
       })
     })
   }
-
-  // pagination
+  
   nextPage = (page) => {
     this.getPhotos(this.state.page + 1);
   };
