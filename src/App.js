@@ -30,7 +30,6 @@ class App extends Component {
   }
   
   
-  // fetch data
   componentDidMount(){
     this.getPhotos(this.state.page);
   }
